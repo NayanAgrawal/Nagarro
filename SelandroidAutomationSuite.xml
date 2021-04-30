@@ -46,7 +46,8 @@
 	</test> <!-- Test -->
 	<test name="Verify toast, popup, exceptions">
 		<classes>
-			<class name="assignment.nagarro.testCases.TC005_Mobile_Basics">
+			<class 
+				name="assignment.nagarro.testCases.TC005_Mobile_Basics">
 				<methods>
 					<include name="verifyDisplaysAToast" />
 					<include name="verifyDisplaysPopup" />

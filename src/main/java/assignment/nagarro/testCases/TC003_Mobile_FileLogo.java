@@ -25,7 +25,7 @@ public class TC003_Mobile_FileLogo extends TestBase {
 
 	@BeforeMethod
 	public void init() throws IOException {
-		Capabilities();
+		capabilities();
 	}
 
 	@Test(priority = 1)

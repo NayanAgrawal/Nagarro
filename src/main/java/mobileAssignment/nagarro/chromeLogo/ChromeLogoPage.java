@@ -3,7 +3,6 @@ package mobileAssignment.nagarro.chromeLogo;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -28,6 +27,9 @@ public class ChromeLogoPage extends TC002_Mobile_Chrome {
 	@FindBy(id = "android:id/title")
 	public WebElement homepageTitle;
 
+	@FindBy(id = "io.selendroid.testapp:id/buttonStartWebview")
+	public WebElement chromeLogoButton;
+
 	@FindBy(xpath = "//android.view.View[@package='io.selendroid.testapp']")
 	public WebElement verifyFormPage;
 
@@ -39,7 +41,7 @@ public class ChromeLogoPage extends TC002_Mobile_Chrome {
 
 	@FindBy(xpath = "//android.view.View[@index='0']")
 	public WebElement verifyFormPageHeading;
-	
+
 	// Verify added name
 	@FindBy(xpath = "//android.view.View[@index='3']")
 	public WebElement verifyAddedName;
@@ -62,26 +64,23 @@ public class ChromeLogoPage extends TC002_Mobile_Chrome {
 	 * 
 	 * @param name, carName
 	 * @throws InterruptedException
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public void chromeLogoTab(String name, String carName) throws InterruptedException, IOException {
 
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		explicatWait(driver, chromeLogoButton);
 
-		driver.findElementByAccessibilityId("buttonStartWebviewCD").click();
+		chromeLogoButton.click();
 
-		WebElement e = driver.findElementById("io.selendroid.testapp:id/tableRowWebview");
-		
-		explicatWait(driver, e);
+		explicatWait(driver, driver.findElementById("io.selendroid.testapp:id/tableRowWebview"));
 
 		assertEquals("Hello, can you please tell me your name?", verifyFormPage.getText());
 
 		child.log(Status.INFO, "Name entered is - " + name);
-		
+
 		nameInput.click();
 		nameInput.clear();
 		nameInput.sendKeys(name);
-		
 
 		selectCarButton.click();
 
@@ -89,8 +88,9 @@ public class ChromeLogoPage extends TC002_Mobile_Chrome {
 		driver.findElement(By.xpath(carValue)).click();
 		child.log(Status.INFO, "Car name entered is - " + carName);
 
-		child.log(Status.INFO, "Item selected - " + ExtentTestManager.getTest().addScreenCaptureFromPath(getScreenshot(driver, "ItemSelected")).toString());
-		
+		child.log(Status.INFO, "Item selected - " + ExtentTestManager.getTest()
+				.addScreenCaptureFromPath(getScreenshot(driver, "ItemSelected")).toString());
+
 		driver.findElement(By.xpath("//android.widget.Button[@text='Send me your name!']")).click();
 
 		// Verified heading
@@ -104,8 +104,9 @@ public class ChromeLogoPage extends TC002_Mobile_Chrome {
 		// Assert added car
 		String expextedCar = "\"" + carName + "\"";
 		assertEquals(expextedCar.toLowerCase(), verifyAddedCar.getText());
-		
-		child.log(Status.INFO, "Added data in chrome logo verification - " + ExtentTestManager.getTest().addScreenCaptureFromPath(getScreenshot(driver, "ChromeLogoAddedData")).toString());
+
+		child.log(Status.INFO, "Added data in chrome logo verification - " + ExtentTestManager.getTest()
+				.addScreenCaptureFromPath(getScreenshot(driver, "ChromeLogoAddedData")).toString());
 
 		child.log(Status.INFO, "Verified heading, name and car name");
 

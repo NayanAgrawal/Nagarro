@@ -25,23 +25,18 @@ public class ExtentManager {
 		String fileName = getReportPath(reportFilepath);
 
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
-		//htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		htmlReporter.config().setChartVisibilityOnOpen(false);
 		htmlReporter.config().setTheme(Theme.DARK);
 		htmlReporter.config().setDocumentTitle(reportFileName);
 		htmlReporter.config().setEncoding("utf-8");
 		htmlReporter.config().setReportName(reportFileName);
-		
-		// htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a
-		// '('zzz')'");
 
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		// Set environment details
 		extent.setSystemInfo("OS", "Mobile - Android and Web");
 		extent.setSystemInfo("Product", "jquery-web and selendroid-Mobile App");
-		extent.setSystemInfo("Environment", "Testing");
-		
+		extent.setSystemInfo("Environment", ReadPropertiesFile.getProperty("environment"));
 
 		return extent;
 	}

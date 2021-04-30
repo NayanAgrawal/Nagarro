@@ -21,7 +21,7 @@ public class TC001_Mobile_Homepage extends TestBase {
 
 	@BeforeMethod
 	public void init() throws IOException {
-		Capabilities();
+		capabilities();
 	}
 
 	@Test(priority = 1)

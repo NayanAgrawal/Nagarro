@@ -22,7 +22,7 @@ public class TC002_Mobile_Chrome extends TestBase {
 
 	@BeforeMethod
 	public void init() throws IOException {
-		Capabilities();
+		capabilities();
 	}
 
 	@Test(priority = 1)

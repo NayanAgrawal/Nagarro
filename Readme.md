@@ -25,3 +25,6 @@ Extent report is used for test cases status and can be viewed in the TestReport 
 
 ## Screenshots
 Screenshots are captured during test case execution and also attached in the test report.
+
+## Parallel execution
+Web test cases are executed parallely by TestNG.

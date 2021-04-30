@@ -18,12 +18,11 @@ import mobileAssignment.nagarro.homepage.HomePage;
 public class TC005_Mobile_Basics extends TestBase {
 
 	public static final Logger log = Logger.getLogger(TC005_Mobile_Basics.class.getName());
-
 	public static ExtentTest child;
 
 	@BeforeMethod
 	public void init() throws IOException {
-		Capabilities();
+		capabilities();
 	}
 
 	@Test(priority = 1)

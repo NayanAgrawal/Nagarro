@@ -1,3 +1,4 @@
-2021-04-30 13:04:23,852 [TestNG] INFO assignment.nagarro.testCases.TC006_Web_Droppable - Dragged and Dropped successfully
-2021-04-30 13:04:24,650 [TestNG] INFO assignment.nagarro.testCases.TC007_Web_Selectable - Items selected successfully
-2021-04-30 13:04:34,291 [TestNG] INFO assignment.nagarro.testCases.TC008_Web_Controlgroup - Current URL - https://jqueryui.com/controlgroup/
+2021-04-30 14:16:30,264 [TestNG] INFO assignment.nagarro.testCases.TC006_Web_Droppable - Dragged and Dropped successfully
+2021-04-30 14:16:31,090 [TestNG] INFO assignment.nagarro.testCases.TC007_Web_Selectable - Items selected successfully
+2021-04-30 14:16:33,071 [TestNG] INFO assignment.nagarro.base.TestBase - https://jqueryui.com/
+2021-04-30 14:16:40,380 [TestNG] INFO assignment.nagarro.testCases.TC008_Web_Controlgroup - Current URL - https://jqueryui.com/controlgroup/

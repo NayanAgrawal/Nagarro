@@ -87,7 +87,7 @@ public class TestBase {
 	 */
 	public void getUrl(String url) {
 
-		System.out.println(url);
+		log.info(url);
 
 		webDriver.manage().window().maximize();
 		webDriver.get(url);
@@ -102,19 +102,17 @@ public class TestBase {
 	 * 
 	 *
 	 */
-	public void Capabilities() throws IOException {
+	public void capabilities() throws IOException {
 
 		File file = new File(ReadPropertiesFile.getProperty("SelendroidApp"));
 		DesiredCapabilities cap = new DesiredCapabilities();
-		// NayanTest
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, ReadPropertiesFile.getProperty("deviceName"));
-		cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "v1.15.1");
+		cap.setCapability(MobileCapabilityType.VERSION, "v1.15.1");
 		cap.setCapability(MobileCapabilityType.APP, file.getAbsolutePath());
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 
-		// return driver;
 	}
 
 	/**
@@ -153,10 +151,10 @@ public class TestBase {
 	 * Method to Check if element is clickable or not
 	 * 
 	 */
-	public static boolean isClickableAndroid(WebElement el, AndroidDriver<AndroidElement> driver) {
+	public static boolean isClickableAndroid(WebElement element, AndroidDriver<AndroidElement> driver) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 2);
-			wait.until(ExpectedConditions.elementToBeClickable(el));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			return true;
 		} catch (Exception e) {
 			return false;
@@ -172,6 +170,10 @@ public class TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(xpathValue));
 	}
 
+	/**
+	 * Method to wait till element become invisible
+	 * 
+	 */
 	public void explicatWaitTillInvisibility(WebDriver driver, WebElement xpathValue) {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.invisibilityOf(xpathValue));

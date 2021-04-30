@@ -23,7 +23,7 @@ public class TC004_Mobile_ProgressBar extends TestBase {
 
 	@BeforeMethod
 	public void init() throws IOException {
-		Capabilities();
+		capabilities();
 	}
 
 	@Test(priority = 1)
