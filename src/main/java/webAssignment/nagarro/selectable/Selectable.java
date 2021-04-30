@@ -86,8 +86,6 @@ public class Selectable extends TC007_Web_Selectable {
 			selectMultiple.perform();
 		}
 
-		Thread.sleep(5000);
-
 		child.log(Status.INFO, "Item selected - " + ExtentTestManager.getTest()
 				.addScreenCaptureFromPath(getScreenshot(webDriver, "ItemSelected")).toString());
 

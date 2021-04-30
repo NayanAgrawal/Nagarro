@@ -10,7 +10,7 @@ import java.util.Properties;
  *
  * @author Nayan Agrawal
  * @version 1.0
- * @since 2021-04-26
+ * @since 2021-04-29
  */
 public class ReadPropertiesFile {
 

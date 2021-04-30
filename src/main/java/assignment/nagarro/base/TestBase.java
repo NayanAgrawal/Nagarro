@@ -153,7 +153,7 @@ public class TestBase {
 	 * Method to Check if element is clickable or not
 	 * 
 	 */
-	public static boolean isClickable(WebElement el, AndroidDriver<AndroidElement> driver) {
+	public static boolean isClickableAndroid(WebElement el, AndroidDriver<AndroidElement> driver) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 2);
 			wait.until(ExpectedConditions.elementToBeClickable(el));

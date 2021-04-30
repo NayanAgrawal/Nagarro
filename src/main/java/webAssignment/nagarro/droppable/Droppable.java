@@ -75,8 +75,6 @@ public class Droppable extends TC006_Web_Droppable {
 
 		Assert.assertEquals("Dropped!", verifyDroppedSuccess.getText());
 
-		Thread.sleep(5000);
-
 		log.info("Dragged and Dropped successfully");
 		child.log(Status.INFO, "Dragged and Dropped successfully");
 

@@ -105,7 +105,7 @@ public class ProgressBarPage extends TC004_Mobile_ProgressBar {
 	 */
 	public void checkRegistrationForm(WebElement element) {
 
-		if (isClickable(element, driver) == true) {
+		if (isClickableAndroid(element, driver) == true) {
 			assertEquals(true, true);
 		} else {
 			assertEquals(false, false);

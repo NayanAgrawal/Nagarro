@@ -38,7 +38,7 @@ public class ExtentManager {
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		// Set environment details
-		extent.setSystemInfo("OS", "Android");
+		extent.setSystemInfo("OS", "Mobile - Android and Web");
 		extent.setSystemInfo("Product", "jquery-web and selendroid-Mobile App");
 		extent.setSystemInfo("Environment", "Testing");
 		

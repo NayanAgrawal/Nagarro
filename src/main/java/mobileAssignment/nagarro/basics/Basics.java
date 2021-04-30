@@ -23,7 +23,7 @@ import static io.appium.java_client.touch.offset.PointOption.point;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 
 /**
- * The settings tab is used to update categories, accounts, currencies etc.
+ * Test toast, popup window and exceptions
  *
  * @author Nayan Agrawal
  * @version 1.0
@@ -79,7 +79,7 @@ public class Basics extends TC005_Mobile_Basics {
 	}
 
 	/**
-	 * verify Displays a toast.
+	 * verify Displays a popup.
 	 *
 	 * @exception InterruptedException
 	 * @throws IOException
