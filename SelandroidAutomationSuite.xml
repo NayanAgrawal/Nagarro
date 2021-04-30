@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Assignment Nagarro">
+	<test name="EN buttonVerification">
+		<classes>
+			<class
+				name="assignment.nagarro.testCases.TC001_Mobile_Homepage">
+				<methods>
+					<include name="enButtonVerify" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test name="Add name in Chrome">
+		<classes>
+			<class name="assignment.nagarro.testCases.TC002_Mobile_Chrome">
+				<methods>
+					<include name="addNameChrome" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Register user in File logo">
+		<parameter name="name" value="Nayan" />
+		<parameter name="password" value="Pass@123" />
+		<parameter name="emailID" value="testemail@test.test" />
+		<classes>
+			<class
+				name="assignment.nagarro.testCases.TC003_Mobile_FileLogo">
+				<methods>
+					<include name="fileLogo" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test name="Verify progress bar and registration page">
+		<classes>
+			<class
+				name="assignment.nagarro.testCases.TC004_Mobile_ProgressBar">
+				<methods>
+					<include name="verifyProgressBar" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test name="Verify toast, popup, exceptions">
+		<classes>
+			<class name="assignment.nagarro.testCases.TC005_Mobile_Basics">
+				<methods>
+					<include name="verifyDisplaysAToast" />
+					<include name="verifyDisplaysPopup" />
+					<include name="verifyUnhandledException" />
+					<include name="verifyTypeAndUnhandledException" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+	

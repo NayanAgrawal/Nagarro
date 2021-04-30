@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nagaro Automation testing">
+<listeners>
+		<listener class-name="assignment.nagarro.base.TestListener" />
+	</listeners>
+	 <suite-files>
+                   <suite-file path="./SelandroidAutomationSuite.xml" />
+                   <suite-file path="./JQueryAutomationSuite.xml" />
+            </suite-files>
+</suite> <!-- Suite -->
