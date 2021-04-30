@@ -11,16 +11,16 @@ Install the latest version of Java and Maven.
 You may need to set your JAVA_HOME.
 Eclipse
 
-# Run
+## Run
 Configure maven project in eclipse, Run TestNG.xml from the current working directory
 
-# Centralized Project run
+## Centralized Project run
 All the TestNG test cases can be executed from a single file called TestNG.xml
 
-#Data reading
+## Data reading
 All the input variables are configured in respective TestNG XML and base URL and application name are configured in constant.properties
 
-#Test Reports 
+## Test Reports 
 Extent report is used for test cases status and can be viewed in the TestReport folder, also test cases status is available in TestNG default report (test-output/emailable-report.html)
 
 ## Screenshots
